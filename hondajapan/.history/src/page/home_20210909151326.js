@@ -1,0 +1,31 @@
+import React, { Component } from "react";
+import Slide from "../component/Slide/Slide";
+import Infor from "../component/Infor/Infor";
+import ProductPC from "../component/Product/ProductPC/ProductPC";
+
+import "../assets/sass/all.scss";
+class App extends Component {
+  render() {
+    return (
+      <div>
+        {/*------------Main------------*/}
+        <main id="main">
+          <div className="container">
+            {/*-----Slide-----*/}
+            <Slide />
+            {/*-----Slide-----*/}
+            <Infor />
+            {/*-----Product-----*/}
+            <section className="product">
+              <ProductPC />
+            </section>
+            {/*-----Product-----*/}
+          </div>
+        </main>
+        {/*------------Main------------*/}
+      </div>
+    );
+  }
+}
+
+export default App;

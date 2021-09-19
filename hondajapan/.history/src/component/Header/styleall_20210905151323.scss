@@ -1,0 +1,143 @@
+$color-yellow: #ffff00;
+$color-blue: #4cbeee;
+$color-orange: #fdbc4c;
+$color-hightblue: #7070db;
+$color-green: #b7dc4c;
+$color-pink: #f44ca7;
+$color-bluebeach: #4cbbbc;
+$color-red: #f44c4c;
+
+body {
+  font-family: "游ゴシック", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3",
+    "メイリオ", sans-serif;
+  font-size: 16px;
+  color: #fff;
+  background-color: #ebeef5;
+}
+h3,
+h4 {
+  font-size: 16px;
+}
+.container {
+  max-width: 922px;
+  margin: 0 auto;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
+ul {
+  list-style: none;
+}
+/* -------------- PC ------------------- */
+@media screen and (min-width: 641px) {
+  #header .header-top .logoSP {
+    display: none;
+  }
+  #main .product {
+    .product-itemSP {
+      display: none;
+    }
+  }
+  /* .mainslide .list .img-line,
+	.mainslide .mainslide-img .img-line {
+		display: none;
+	} */
+  .toogle {
+    display: none;
+  }
+}
+
+/* -------------- SP ------------------- */
+@media screen and (max-width: 640px) {
+  #header {
+    .header-top {
+      .header-logo {
+        justify-content: center;
+        .logoPC {
+          display: none;
+        }
+        .logoSP {
+          padding: 20px;
+        }
+      }
+    }
+    .header-menu {
+      .menu {
+        display: none;
+        ul {
+          flex-direction: column;
+          li {
+            position: relative;
+            width: 100%;
+            border-bottom: 1px dotted #fff;
+            border-right: none;
+            text-align: inherit;
+          }
+          li.first {
+            display: none;
+          }
+          li.second {
+            border-top: 1px solid #fff;
+          }
+          li::after {
+            display: none;
+          }
+          li:hover {
+            background-color: #7fdbff;
+            transition: 0.2s;
+          }
+        }
+      }
+    }
+  }
+
+  #main {
+    .mainslide {
+      .mainslide-img {
+        min-height: 360px !important;
+      }
+      .list {
+        min-height: 88px !important;
+      }
+    }
+    .main-infor {
+      flex-direction: column;
+    }
+    .product {
+      .product-itemPC {
+        display: none;
+      }
+      .product-itemSP {
+        grid-template-columns: repeat(1, 1fr) !important;
+        .img-line {
+          display: none;
+        }
+        .item-icon {
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+
+  #footer .footer-text {
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+  }
+  .toogle {
+    display: block;
+  }
+}
+@media screen and (max-width: 414px) {
+}

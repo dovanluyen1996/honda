@@ -1,0 +1,12 @@
+.item-icon {
+  width: 100%;
+  height: 14%;
+  .item-iconline {
+    display: inline-block;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    a {
+      margin-right: 20px;
+    }
+  }
+}

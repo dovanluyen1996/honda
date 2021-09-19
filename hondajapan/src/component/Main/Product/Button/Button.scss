@@ -1,0 +1,18 @@
+.btn {
+	background-color: black;
+	color: #fff;
+	padding: 5px 10px;
+	margin-bottom: 15px;
+	margin-top: 10px;
+	border-radius: 5px;
+	font-weight: bold;
+	cursor: pointer;
+	i {
+		margin-right: 10px;
+		font-size: 16px;
+	}	
+}
+.btn:hover {
+	background-color: aqua;
+	color: black;
+}

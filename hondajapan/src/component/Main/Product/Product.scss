@@ -1,0 +1,96 @@
+
+
+.product {
+  background-image: url('https://media.istockphoto.com/videos/abstract-grid-background-loop-video-id1171939290?s=640x640');
+  &_name {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyx4ah55Ll9c4iKefUvl5pKfl5mh0bHmh2hrx-C_VS8KNbCcUSUVcQ50gtOked6NMOj_M&usqp=CAU');  
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 15px;
+    p {
+      font-size: 15px;
+      color: yellow;
+    }
+    a {
+      color: #fff;
+    }
+    a::after{
+      content: "";
+      display: block;
+      width: 0;
+      height: 2px;
+      background-color: #fff;
+      transition: .2s;
+    }
+    a:hover::after {
+      width: 100%;
+    }
+  }
+  .product-itemPC {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+    padding: 15px;
+    .item {
+      text-align: center;;
+      box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 4px,
+        rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+        rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+      background: #16222A;  
+      background: -webkit-linear-gradient(to right, #3A6073, #16222A); 
+      background: linear-gradient(to right, #3A6073, #16222A); 
+      
+      .item-image {
+        position: relative;
+        width: 100%;
+        height: 180px;
+        overflow: hidden;
+
+        .img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: all 1s ease;
+        }
+        .img:hover {
+          opacity: 0.8;
+          transform: scale(1.2);
+        }
+      }
+      .item-infor {
+        text-align: center;
+        width: 100%;
+        h5 {
+          display: inline-block;
+          color: #fff;
+          font-size: 13px;
+          font-weight: 800;
+        }
+      }
+    }
+    
+  }
+  .product-itemPC {
+    /* tạo hiệu ứng chuyển động fade */
+    animation-name: product-itemPC;
+    animation-duration: 2s;
+  }
+  .rating {
+    display: flex;
+    justify-content: center;
+    column-gap: 5px;
+    i {
+      color: yellow;
+    }
+  }
+
+  @keyframes product-itemPC {
+    from {
+      opacity: 0.6;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
